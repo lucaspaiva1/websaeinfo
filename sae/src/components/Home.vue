@@ -52,7 +52,7 @@
 
                                   <th scope="row"><a href="/#/saeinfo/pacientes">Pacientes</a></th>
 
-                                  <td><a href="/#/saeinfo/novoPaciente" class="addlink">Adicionar</a></td>
+                                  <td><a href="/#/saeinfo/paciente/novo" class="addlink">Adicionar</a></td>
 
                                   <td><a href="/#/saeinfo/pacientes" class="changelink">Listar</a></td>
 
