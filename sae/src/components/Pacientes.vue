@@ -19,7 +19,7 @@
             <div id="content-main">
                 <ul class="object-tools">
                     <li>
-                        <a href="./novoPaciente.html" class="addlink">
+                        <a href="#/saeinfo/paciente/novo" class="addlink">
                             Adicionar paciente
                         </a>
                     </li>
@@ -81,7 +81,7 @@
                                 <tbody>
                                     <tr v-for="(paciente, index) in pacientes" :class="index % 2 == 0 ? 'row1' : 'row2'">
                                         <td class="action-checkbox"><input class="action-select" name="_selected_action" type="checkbox" value="70"></td>
-                                        <th class="field-Nome"><a :href="'./paciente.html?id='+paciente.id">{{paciente.Nome}}</a></th>
+                                        <th class="field-Nome"><a :href="'#/saeinfo/paciente/'+paciente.id">{{paciente.Nome}}</a></th>
                                         <td class="field-Leito">{{paciente.Leito}}</td>
                                         <td class="field-Data_de_internacao nowrap">{{paciente.Data_de_internacao}}</td>
                                     </tr>

@@ -14,7 +14,7 @@
                   <div class="app-SaeApp module">
                       <table>
                           <caption>
-                              <a href="./home.html" class="section" title="Modelos na aplicação Saeapp">Saeapp</a>
+                              <a href="/saeinfo" class="section" title="Modelos na aplicação Saeapp">Saeapp</a>
                           </caption>
 
                           <tbody>

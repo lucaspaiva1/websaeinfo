@@ -73,7 +73,7 @@ export default {
             sessionStorage.setItem('user', JSON.stringify(resposta))
             // let user = JSON.parse(sessionStorage.getItem("user"))
             // window.location.replace('./home.html')
-            this.$router.push('/home')
+            this.$router.push('/saeinfo')
             // console.log(resposta)
           }
         }).fail(() => {

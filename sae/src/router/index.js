@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Pacientes from '@/components/Pacientes'
 import NovoPaciente from '@/components/NovoPaciente'
 import Paciente from '@/components/Paciente'
+import NovoHistorico from '@/components/NovoHistorico'
 
 Vue.use(Router)
 
@@ -26,7 +27,7 @@ export default new Router({
       component: Pacientes
     },
     {
-      path: '/saeinfo/novopaciente',
+      path: '/saeinfo/paciente/novo',
       name: 'NovoPaciente',
       component: NovoPaciente
     },
@@ -34,6 +35,11 @@ export default new Router({
       path: '/saeinfo/paciente/:idPaciente',
       name: 'Paciente',
       component: Paciente
+    },
+    {
+      path: '/saeinfo/paciente/:idpaciente/historico/novo',
+      name: 'NovoHistorico',
+      component: NovoHistorico
     }
   ]
 })
