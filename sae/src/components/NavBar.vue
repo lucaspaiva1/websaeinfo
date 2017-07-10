@@ -3,7 +3,7 @@
     <!-- Header -->
     <div id="header">
         <div id="branding">
-            <a class="navbar-brand" href="./home.html">
+            <a class="navbar-brand" href="#/saeinfo">
 
                 <h1> <img src="../../static/logoFinal1.png" style="width:70px;"> </h1>
             </a>
@@ -13,8 +13,8 @@
 
             Bem-vindo(a),
             <strong>{{nome}}</strong>.
-            <a href="/password_change/">Alterar senha</a> /
-            <a href="/%2FSaeApp/relatorios"> Visualizar relatórios</a> /
+            <a href="/alterarsenha/">Alterar senha</a> /
+            <a href="/saeinfo/relatorios"> Visualizar relatórios</a> /
             <a href="/logout/">Encerrar sessão</a>
 
         </div>
