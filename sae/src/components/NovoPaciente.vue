@@ -167,7 +167,7 @@ export default {
           //  armazena informacoes do novo paciente
           sessionStorage.setItem('novoPaciente', JSON.stringify(res))
           //  redireciona para tela de editar o paciente
-          window.location.replace('#/saeinfo/paciente/' + res.id + '/historico/novo')
+          window.location.replace('#/saeinfo/paciente/' + res + '/historico/novo')
         }
       })
     },

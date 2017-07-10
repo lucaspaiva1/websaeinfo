@@ -9,7 +9,7 @@
 
           <!-- END Header -->
           <div class="breadcrumbs">
-              <a href="/">Início</a>
+              <a href="#/saeinfo">Início</a>
           </div>
           <div id="main-content" action="" style="line-height: 25px;" method="POST">
               <input type='text' name="idPaciente" value='2' readonly="readonly" style="display:none;">
@@ -606,6 +606,7 @@ export default {
       $.post('http://localhost/sae/addHistorico.php', JSON.stringify(this.historico))
         .then(res => {
           console.log(res)
+          window.location.replace('#/saeinfo/paciente/' + this.historico.idPaciente)
         })
     }
   },
