@@ -14,37 +14,37 @@
                   <div class="app-SaeApp module">
                       <table>
                           <caption>
-                              <a href="/saeinfo" class="section" title="Modelos na aplicação Saeapp">Saeapp</a>
+                              <a href="#/saeinfo" class="section" title="Modelos na aplicação Saeapp">Saeapp</a>
                           </caption>
 
                           <tbody>
                               <tr class="model-caracteristica">
 
-                                  <th scope="row"><a href="/SaeApp/caracteristica/">Caracteristicas</a></th>
+                                  <th scope="row"><a href="#/saeinfo/caracteristicas/">Caracteristicas</a></th>
 
-                                  <td><a href="/SaeApp/caracteristica/add/" class="addlink">Adicionar</a></td>
+                                  <td><a href="#/saeinfo/caracteristica/nova/" class="addlink">Adicionar</a></td>
 
-                                  <td><a href="/SaeApp/caracteristica/" class="changelink">Listar</a></td>
+                                  <td><a href="#/saeinfo/caracteristicas/" class="changelink">Listar</a></td>
 
                               </tr>
 
                               <tr class="model-caracteristicasdefinidora">
 
-                                  <th scope="row"><a href="/SaeApp/caracteristicasdefinidora/">Caracteristicas definidoras</a></th>
+                                  <th scope="row"><a href="#/saeinfo/caracteristicasdefinidoras/">Caracteristicas definidoras</a></th>
 
-                                  <td><a href="/SaeApp/caracteristicasdefinidora/add/" class="addlink">Adicionar</a></td>
+                                  <td><a href="#/saeinfo/caracteristicasdefinidora/nova/" class="addlink">Adicionar</a></td>
 
-                                  <td><a href="/SaeApp/caracteristicasdefinidora/" class="changelink">Listar</a></td>
+                                  <td><a href="#/saeinfo/caracteristicasdefinidoras/" class="changelink">Listar</a></td>
 
                               </tr>
 
                               <tr class="model-intervencao">
 
-                                  <th scope="row"><a href="/SaeApp/intervencao/">Intervencaos</a></th>
+                                  <th scope="row"><a href="#/saeinfo/intervencoes/">Intervenções</a></th>
 
-                                  <td><a href="/SaeApp/intervencao/add/" class="addlink">Adicionar</a></td>
+                                  <td><a href="#/saeinfo/intervencao/nova/" class="addlink">Adicionar</a></td>
 
-                                  <td><a href="/SaeApp/intervencao/" class="changelink">Listar</a></td>
+                                  <td><a href="#/saeinfo/intervencoes/" class="changelink">Listar</a></td>
 
                               </tr>
 
@@ -62,9 +62,9 @@
 
                                   <th scope="row"><a href="/SaeApp/planodecuidados/">Plano de cuidados</a></th>
 
-                                  <td><a href="/SaeApp/planodecuidados/add/" class="addlink">Adicionar</a></td>
+                                  <td><a href="#/saeinfo/planodecuidados/novo/" class="addlink">Adicionar</a></td>
 
-                                  <td><a href="/SaeApp/planodecuidados/" class="changelink">Listar</a></td>
+                                  <td><a href="#/saeinfo/planodecuidados/" class="changelink">Listar</a></td>
 
                               </tr>
 
