@@ -37,8 +37,8 @@
 
                                         <select id="id_Sexo" name="Sexo" v-model="paciente.Sexo">
                                       <option value="">---------</option>
-                                      <option value="Masculino">Masculino</option>
-                                      <option value="Feminino">Feminino</option>
+                                      <option value="masculino">Masculino</option>
+                                      <option value="feminino">Feminino</option>
                                     </select>
                                     </div>
                                 </div>
@@ -56,10 +56,10 @@
                                         <label class="inline" for="id_Estado_Civil">Estado Civil:</label>
                                         <select id="id_Estado_Civil" v-model="paciente.Estado_Civil">
                                       <option value="">---------</option>
-                                      <option value="Solteiro">Solteiro</option>
                                       <option value="Casado">Casado</option>
-                                      <option value="Viuvo">Viuvo</option>
-                                      <option value="Outros">Outros</option>
+                                      <option value="Divorciado">Divorciado</option>
+                                      <option value="Solteiro">Solteiro</option>
+                                      <option value="Viúvo">Viúvo</option>
                                     </select>
                                     </div>
                                 </div>
