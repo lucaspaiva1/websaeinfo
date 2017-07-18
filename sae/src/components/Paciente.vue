@@ -18,7 +18,7 @@
                   <div id="content-main">
                       <ul class="object-tools">
                           <li>
-                              <a :href="'#/saeinfo/paciente/'+paciente.id+'/historico/'" class="historylink">Histórico</a>
+                              <a :href="'#/saeinfo/paciente/'+paciente.id+'/historico'" class="historylink">Histórico de Enfermagem</a>
                           </li>
                       </ul>
 
