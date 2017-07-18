@@ -736,6 +736,8 @@ export default {
       // transforma genitalia em string
       this.historico.genitalia = this.historico.genitaliaOpcoes.toString() + ',' + this.historico.genitaliaOutros
 
+      console.log(this.historico)
+
       $.post('http://localhost/sae/editHistorico.php', JSON.stringify(this.historico))
         .then(res => {
           console.log(res)
