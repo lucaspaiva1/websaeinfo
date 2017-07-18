@@ -39,8 +39,8 @@
                   <input type="checkbox" name="antecedentes" id="Alcoolismo" value="Alcoolismo" v-model="historico.antecedentesOpcoes">
                   <label for="Alcoolismo">Alcoolismo</label>
 
-                  <input type="checkbox" name="antecedentes" id="Outros" value="Outros" v-model="historico.antecedentesOpcoes">
-                  <label for="Outros">Outros</label>
+                  <label for="Outros">, Outros</label>
+                  <input type="text" name="antecedentes" id="Outros" value="Outros" v-model="historico.antecedentesOutros">
 
                   <br>
 
@@ -270,11 +270,11 @@
 
                   <br>
 
-                  <label for='presencaDeEdema'><b>Presença de edema: </b></label>
-                  <input type="checkbox" name="presencaDeEdema" id="Pés" value="Pés" v-model="historico.presencaDeEdema"> <label for="Pés">Pés</label>
-                  <input type="checkbox" name="presencaDeEdema" id="MMII" value="MMII" v-model="historico.presencaDeEdema"> <label for="MMII">MMII</label>
-                  <input type="checkbox" name="presencaDeEdema" id="MMSS" value="MMSS" v-model="historico.presencaDeEdema"> <label for="MMSS">MMSS</label>
-                  <input type="checkbox" name="presencaDeEdema" id="Anasarca" value="Anasarca" v-model="historico.presencaDeEdema"> <label for="Anasarca">Anasarca</label>
+                  <label for='presencaDeEdemaOpcoes'><b>Presença de edema: </b></label>
+                  <input type="checkbox" name="presencaDeEdemaOpcoes" id="Pés" value="Pés" v-model="historico.presencaDeEdemaOpcoes"> <label for="Pés">Pés</label>
+                  <input type="checkbox" name="presencaDeEdemaOpcoes" id="MMII" value="MMII" v-model="historico.presencaDeEdemaOpcoes"> <label for="MMII">MMII</label>
+                  <input type="checkbox" name="presencaDeEdemaOpcoes" id="MMSS" value="MMSS" v-model="historico.presencaDeEdemaOpcoes"> <label for="MMSS">MMSS</label>
+                  <input type="checkbox" name="presencaDeEdemaOpcoes" id="Anasarca" value="Anasarca" v-model="historico.presencaDeEdemaOpcoes"> <label for="Anasarca">Anasarca</label>
 
                   <br>
 
@@ -289,27 +289,26 @@
                   <br>
 
                   <label for='eliminacao'><b>Eliminação urinária: </b></label>
+                  <br>
                   <label for="volume">Volume: (ml;h)</label>
                   <input name="volume" type="number" id="volume" v-model="historico.eliminacaoUrinaria_Volume">
 
-
                   <br>
-                  <label for='eliminacaoUrinaria'><b>Características: </b></label>
-                  <input type="checkbox" name="eliminacaoUrinaria" id="Espontânea2" value="Espontânea" v-model="historico.eliminacaoUrinaria"> <label for="Espontânea2">Espontânea</label>
-                  <input type="checkbox" name="eliminacaoUrinaria" id="Retenção" value="Retenção" v-model="historico.eliminacaoUrinaria"> <label for="Retenção">Retenção</label>
-                  <input type="checkbox" name="eliminacaoUrinaria" id="Incontinência" value="Incontinência" v-model="historico.eliminacaoUrinaria"> <label for="Incontinência">Incontinência</label>
-                  <input type="checkbox" name="eliminacaoUrinaria" id="SVD" value="SVD" v-model="historico.eliminacaoUrinaria"> <label for="SVD">SVD</label>
-                  <input type="checkbox" name="eliminacaoUrinaria" id="Dispositivo urinário" value="Dispositivo urinário" v-model="historico.eliminacaoUrinaria"> <label for="Dispositivo urinário">Dispositivo urinário</label>
+                  <input type="checkbox" name="eliminacaoUrinariaOpcoes" id="Espontânea2" value="Espontânea" v-model="historico.eliminacaoUrinariaOpcoes"> <label for="Espontânea2">Espontânea</label>
+                  <input type="checkbox" name="eliminacaoUrinariaOpcoes" id="Retenção" value="Retenção" v-model="historico.eliminacaoUrinariaOpcoes"> <label for="Retenção">Retenção</label>
+                  <input type="checkbox" name="eliminacaoUrinariaOpcoes" id="Incontinência" value="Incontinência" v-model="historico.eliminacaoUrinariaOpcoes"> <label for="Incontinência">Incontinência</label>
+                  <input type="checkbox" name="eliminacaoUrinariaOpcoes" id="SVD" value="SVD" v-model="historico.eliminacaoUrinariaOpcoes"> <label for="SVD">SVD</label>
+                  <input type="checkbox" name="eliminacaoUrinariaOpcoes" id="Dispositivo urinário" value="Dispositivo urinário" v-model="historico.eliminacaoUrinariaOpcoes"> <label for="Dispositivo urinário">Dispositivo urinário</label>
                   <br>
 
-                  <label for='hidratacao_Caracteristicas'><b>hidratacao_Caracteristicas: </b></label>
-                  <input type="checkbox" name="hidratacao_Caracteristicas" id="Disúria" value="Disúria" v-model="historico.hidratacao_Caracteristicas"> <label for="Disúria">Disúria</label>
-                  <input type="checkbox" name="hidratacao_Caracteristicas" id="Oligúria" value="Oligúria" v-model="historico.hidratacao_Caracteristicas"> <label for="Oligúria">Oligúria</label>
-                  <input type="checkbox" name="hidratacao_Caracteristicas" id="Anúria" value="Anúria" v-model="historico.hidratacao_Caracteristicas"> <label for="Anúria">Anúria</label>
-                  <input type="checkbox" name="hidratacao_Caracteristicas" id="Poliúria" value="Poliúria" v-model="historico.hidratacao_Caracteristicas"> <label for="Poliúria">Poliúria</label>
-                  <input type="checkbox" name="hidratacao_Caracteristicas" id="Hematúria" value="Hematúria" v-model="historico.hidratacao_Caracteristicas"> <label for="Hematúria">Hematúria</label>
+                  <label for='hidratacaoCaracteristicasOpcoes'><b>Caracteristicas: </b></label>
+                  <input type="checkbox" name="hidratacaoCaracteristicasOpcoes" id="Disúria" value="Disúria" v-model="historico.hidratacaoCaracteristicasOpcoes"> <label for="Disúria">Disúria</label>
+                  <input type="checkbox" name="hidratacaoCaracteristicasOpcoes" id="Oligúria" value="Oligúria" v-model="historico.hidratacaoCaracteristicasOpcoes"> <label for="Oligúria">Oligúria</label>
+                  <input type="checkbox" name="hidratacaoCaracteristicasOpcoes" id="Anúria" value="Anúria" v-model="historico.hidratacaoCaracteristicasOpcoes"> <label for="Anúria">Anúria</label>
+                  <input type="checkbox" name="hidratacaoCaracteristicasOpcoes" id="Poliúria" value="Poliúria" v-model="historico.hidratacaoCaracteristicasOpcoes"> <label for="Poliúria">Poliúria</label>
+                  <input type="checkbox" name="hidratacaoCaracteristicasOpcoes" id="Hematúria" value="Hematúria" v-model="historico.hidratacaoCaracteristicasOpcoes"> <label for="Hematúria">Hematúria</label>
                   , Outros:
-                  <input name="hidratacao_CaracteristicasOutros" type="Text" id="outrosCarac" v-model="historico.hidratacao_CaracteristicasOutros"> <br>
+                  <input name="hidratacaoCaracteristicasOutros" type="Text" id="outrosCarac" v-model="historico.hidratacaoCaracteristicasOutros"> <br>
 
                   <fieldset class="module aligned ">
                       <b>1.5. Alimentação e Eliminação Vesical</b>
@@ -321,22 +320,17 @@
 
 
                   <label for="glicemia"><b>Glicemia:</b></label>
-                  <input name="glicemia" type="Text" id="glicemia" v-model="historico.glicemia"> <br>
-
-                  <!-- <label for='apetite'><b>Apetite: </b></label>
-                  <input type="radio" name="apetite" id="Normal" value="Normal"> <label for="Normal">Normal</label>
-                  <input type="radio" name="apetite" id="Aumentado" value="Aumentado"> <label for="Aumentado">Aumentado</label>
-                  <input type="radio" name="apetite" id="Diminuído" value="Diminuído"> <label for="Diminuído">Diminuído</label>
-                  <input type="radio" name="apetite" id="Não se aplica" value="Não se aplica"> <label for="Não se aplica">Não se aplica</label> -->
+                  <input name="glicemia" type="Text" id="glicemia" v-model="historico.glicemia">
 
                   <br>
-                  <label for='alimentacao_ViasDeAdministracao'><b>Vias de administração: </b></label>
-                  <input type="checkbox" name="alimentacao_ViasDeAdministracao" id="Oral" value="Oral" v-model="historico.alimentacao_ViasDeAdministracao"> <label for="Oral">Oral</label>
-                  <input type="checkbox" name="alimentacao_ViasDeAdministracao" id="SNG" value="SNG" v-model="historico.alimentacao_ViasDeAdministracao"> <label for="SNG">SNG</label>
-                  <input type="checkbox" name="alimentacao_ViasDeAdministracao" id="SNE" value="SNE" v-model="historico.alimentacao_ViasDeAdministracao"> <label for="SNE">SNE</label>
-                  <input type="checkbox" name="alimentacao_ViasDeAdministracao" id="Parenteral" value="Parenteral" v-model="historico.alimentacao_ViasDeAdministracao"> <label for="Parenteral">Parenteral</label>
-                  <input type="checkbox" name="alimentacao_ViasDeAdministracao" id="OutrosVias" value="" v-model="historico.alimentacao_ViasDeAdministracao"> <label for="OutrosVias">Outros</label>
-                  <input type="text" name="vias" id="OutrosVias" v-model="historico.viasOutros">
+                  <label for='alimentacaoViasDeAdministracaoOpcoes'><b>Vias de administração: </b></label>
+                  <input type="checkbox" name="alimentacaoViasDeAdministracaoOpcoes" id="Oral" value="Oral" v-model="historico.alimentacaoViasDeAdministracaoOpcoes"> <label for="Oral">Oral</label>
+                  <input type="checkbox" name="alimentacaoViasDeAdministracaoOpcoes" id="SNG" value="SNG" v-model="historico.alimentacaoViasDeAdministracaoOpcoes"> <label for="SNG">SNG</label>
+                  <input type="checkbox" name="alimentacaoViasDeAdministracaoOpcoes" id="SNE" value="SNE" v-model="historico.alimentacaoViasDeAdministracaoOpcoes"> <label for="SNE">SNE</label>
+                  <input type="checkbox" name="alimentacaoViasDeAdministracaoOpcoes" id="Parenteral" value="Parenteral" v-model="historico.alimentacaoViasDeAdministracaoOpcoes"> <label for="Parenteral">Parenteral</label>
+
+                  <label for="alimentacaoViasDeAdministracaoOutros">, Outros:</label>
+                  <input type="text" name="alimentacaoViasDeAdministracaoOutros" id="alimentacaoViasDeAdministracaoOutros" v-model="historico.alimentacaoViasDeAdministracaoOutros">
 
                   <br>
 
@@ -345,9 +339,9 @@
                   <input type="checkbox" name="abdome" id="Globoso" value="Globoso" v-model="historico.abdomeOpcoes"> <label for="Globoso">Globoso</label>
                   <input type="checkbox" name="abdome" id="Distendido" value="Distendido" v-model="historico.abdomeOpcoes"> <label for="Distendido">Distendido</label>
                   <input type="checkbox" name="abdome" id="Doloroso à palpação" value="Doloroso à palpação" v-model="historico.abdomeOpcoes"> <label for="Doloroso à palpação">Doloroso à palpação</label>
-                  <input type="checkbox" name="abdome" id="OutrosAbdome" value="" v-model="historico.abdomeOpcoes">
-                  <label for="OutrosAbdome">Outros </label>
-                  <input type="text" name="abdome" id="OutrosAbdome" v-model="historico.abdomeOutros">
+
+                  <label for="abdomeOutros">, Outros:</label>
+                  <input type="text" name="abdome" id="abdomeOutros" v-model="historico.abdomeOutros">
 
                   <br>
 
@@ -394,19 +388,19 @@
 
                   <br>
 
-                  <label for='pele'><b>Pele: </b></label>
-                  <input type="checkbox" name="pele" id="Cianose" value="Cianose" v-model="historico.pele"> <label for="Cianose">Cianose</label>
-                  <input type="checkbox" name="pele" id="Icterícia" value="Icterícia" v-model="historico.pele"> <label for="Icterícia">Icterícia</label>
-                  <input type="checkbox" name="pele" id="Petéquias" value="Petéquias" v-model="historico.pele"> <label for="Petéquias">Petéquias</label>
-                  <input type="checkbox" name="pele" id="Corado" value="Corado" v-model="historico.pele"> <label for="Corado">Corado</label>
-                  <input type="checkbox" name="pele" id="Hipocorado" value="Hipocorado" v-model="historico.pele"> <label for="Hipocorado">Hipocorado</label>
-                  <input type="checkbox" name="pele" id="Hipercorado" value="Hipercorado" v-model="historico.pele"> <label for="Hipercorado">Hipercorado</label>
-                  <input type="checkbox" name="pele" id="Equimoses" value="Equimoses" v-model="historico.pele"> <label for="Equimoses">Equimoses</label>
-                  <input type="checkbox" name="pele" id="Hematomas" value="Hematomas" v-model="historico.pele"> <label for="Hematomas">Hematomas</label>
-                  <input type="checkbox" name="pele" id="Escoriações" value="Escoriações" v-model="historico.pele"> <label for="Escoriações">Escoriações</label>
-                  <input type="checkbox" name="pele" id="OutrosPele" value="" v-model="historico.pele">
-                  <label for="OutrosPele">Outros </label>
-                  <input type="text" name="pele" id="OutrosPele" v-model="historico.peleOutros">
+                  <label for='peleOpcoes'><b>Pele: </b></label>
+                  <input type="checkbox" name="peleOpcoes" id="Cianose" value="Cianose" v-model="historico.peleOpcoes"> <label for="Cianose">Cianose</label>
+                  <input type="checkbox" name="peleOpcoes" id="Icterícia" value="Icterícia" v-model="historico.peleOpcoes"> <label for="Icterícia">Icterícia</label>
+                  <input type="checkbox" name="peleOpcoes" id="Petéquias" value="Petéquias" v-model="historico.peleOpcoes"> <label for="Petéquias">Petéquias</label>
+                  <input type="checkbox" name="peleOpcoes" id="Corado" value="Corado" v-model="historico.peleOpcoes"> <label for="Corado">Corado</label>
+                  <input type="checkbox" name="peleOpcoes" id="Hipocorado" value="Hipocorado" v-model="historico.peleOpcoes"> <label for="Hipocorado">Hipocorado</label>
+                  <input type="checkbox" name="peleOpcoes" id="Hipercorado" value="Hipercorado" v-model="historico.peleOpcoes"> <label for="Hipercorado">Hipercorado</label>
+                  <input type="checkbox" name="peleOpcoes" id="Equimoses" value="Equimoses" v-model="historico.peleOpcoes"> <label for="Equimoses">Equimoses</label>
+                  <input type="checkbox" name="peleOpcoes" id="Hematomas" value="Hematomas" v-model="historico.peleOpcoes"> <label for="Hematomas">Hematomas</label>
+                  <input type="checkbox" name="peleOpcoes" id="Escoriações" value="Escoriações" v-model="historico.peleOpcoes"> <label for="Escoriações">Escoriações</label>
+
+                  <label for="peleOutros">, Outros:</label>
+                  <input type="text" name="peleOutros" id="peleOutros" v-model="historico.peleOutros">
 
                   <br>
 
@@ -418,7 +412,8 @@
                   <input type="checkbox" name="olhos" id="IcteríciaOlhos" value="Icterícia" v-model="historico.olhosOpcoes"> <label for="IcteríciaOlhos">Icterícia</label>
                   <input type="checkbox" name="olhos" id="Endema de conjuntiva" value="Endema de conjuntiva" v-model="historico.olhosOpcoes"> <label for="Endema de conjuntiva">Endema de conjuntiva</label>
                   <input type="checkbox" name="olhos" id="OutrosOlhos" value="" v-model="historico.olhosOpcoes">
-                  <label for="OutrosOlhos">Outros </label>
+
+                  <label for="OutrosOlhos">, Outros </label>
                   <input type="text" name="olhos" id="OutrosOlhos" v-model="historico.olhosOutros">
 
                   <br>
@@ -447,12 +442,12 @@
 
                   <br>
 
-                  <label for='genitalia'><b>Genitália: </b></label>
-                  <input type="checkbox" name="genitalia" id="Sem anormalidades" value="Sem anormalidades" v-model="historico.genitalia"> <label for="Sem anormalidades">Sem anormalidades</label>
-                  <input type="checkbox" name="genitalia" id="Secreção" value="Secreção" v-model="historico.genitalia"> <label for="Secreção">Secreção</label>
-                  <input type="checkbox" name="genitalia" id="outrosGenitalia" value="" v-model="historico.genitalia">
-                  <label for="outrosGenitalia">Outros: </label>
-                  <input type="text" name="genitalia" id="outrosGenitalia" v-model="historico.genitaliaOutros">
+                  <label for='genitaliaOpcoes'><b>Genitália: </b></label>
+                  <input type="checkbox" name="genitaliaOpcoes" id="Sem anormalidades" value="Sem anormalidades" v-model="historico.genitaliaOpcoes"> <label for="Sem anormalidades">Sem anormalidades</label>
+                  <input type="checkbox" name="genitaliaOpcoes" id="Secreção" value="Secreção" v-model="historico.genitaliaOpcoes"> <label for="Secreção">Secreção</label>
+
+                  <label for="genitaliaOutros">, Outros: </label>
+                  <input type="text" name="genitaliaOutros" id="genitaliaOutros" v-model="historico.genitaliaOutros">
 
 
                   <fieldset class="module aligned ">
@@ -505,6 +500,7 @@ export default {
         internacoes: 0,
         motivoInternacao: '',
         antecedentesOpcoes: [],
+        antecedentesOutros: '',
         antecedentes: '',
         alergias: '',
         aspiracao: '',
@@ -546,15 +542,19 @@ export default {
         pulsoPalpabilidade: '',
         impalpavel: '',
         turgidezDaPele: '',
-        presencaDeEdema: [],
-        eliminacaoUrinaria: [],
-        hidratacao_Caracteristicas: [],
-        hidratacao_CaracteristicasOutros: '',
+        presencaDeEdemaOpcoes: [],
+        presencaDeEdema: '',
+        eliminacaoUrinariaOpcoes: [],
+        eliminacaoUrinaria: '',
         eliminacaoUrinaria_Volume: '',
+        hidratacaoCaracteristicasOpcoes: [],
+        hidratacao_Caracteristicas: '',
+        hidratacaoCaracteristicasOutros: '',
         tipoDeDieta: '',
         glicemia: '',
-        vias: '',
-        viasOutros: '',
+        alimentacaoViasDeAdministracaoOpcoes: [],
+        alimentacao_ViasDeAdministracao: '',
+        alimentacaoViasDeAdministracaoOutros: '',
         abdomeOpcoes: [],
         abdome: '',
         abdomeOutros: '',
@@ -565,6 +565,7 @@ export default {
         eliminacaoIntestinal_frequencia: '',
         eliminacaoIntestinal: '',
         genitalia_lesoes: '',
+        peleOpcoes: [],
         pele: '',
         peleOutros: '',
         pele_temperatura: '',
@@ -580,6 +581,7 @@ export default {
         dreno: '',
         dreno_local: '',
         dreno_tipo: '',
+        genitaliaOpcoes: [],
         genitalia: '',
         genitaliaOutros: '',
         necessidadeDeContencao: '',
@@ -603,50 +605,136 @@ export default {
       .then(resposta => {
         this.historico = resposta
 
-        let oxigenacao = this.historico.oxigenacao.split(',')
-        this.historico.oxigenacao = oxigenacao[0]
-        if (oxigenacao[0] === 'Traqueostomia') {
-          this.historico.traqueostomia = oxigenacao[1]
-        } else if (oxigenacao[0] === 'Ventilação mecânica') {
-          this.historico.ventilacaomecanica = oxigenacao[1]
+        // atribuindo antecedentes
+        this.historico.antecedentesOpcoes = []
+        this.historico.antecedentesOutros = []
+        for (let item of this.historico.antecedentes.split(',')) {
+          if (item.toString() === 'HAS' || item.toString() === 'Diabete Méllitus' || item === 'Tabagismo' || item === 'Alcoolismo') {
+            this.historico.antecedentesOpcoes.push(item)
+          } else {
+            this.historico.antecedentesOutros.push(item)
+          }
         }
 
-        let palpabilidade = this.historico.palpabilidade.split(',')
-        this.historico.palpabilidade = palpabilidade[0]
-        if (palpabilidade[0] === 'Impalpável') {
-          this.historico.impalpavel = palpabilidade[1]
+        // atribuindo presenca de edema
+        this.historico.presencaDeEdemaOpcoes = this.historico.presencaDeEdema.split(',')
+
+        // atribuindo eliminacao Urinaria
+        this.historico.eliminacaoUrinariaOpcoes = this.historico.eliminacaoUrinaria.split(',')
+
+        // atribuindo caracteristica hidratacao e eliminacao
+        this.historico.hidratacaoCaracteristicasOpcoes = []
+        this.historico.hidratacaoCaracteristicasOutros = []
+        for (let item of this.historico.hidratacao_Caracteristicas.split(',')) {
+          if (item.toString() === 'Disúria' || item.toString() === 'Oligúria' || item === 'Anúria' || item === 'Poliúria' || item === 'Hematúria') {
+            this.historico.hidratacaoCaracteristicasOpcoes.push(item)
+          } else {
+            this.historico.hidratacaoCaracteristicasOutros.push(item)
+          }
         }
 
-        this.historico.presencaDeEdema = this.historico.presencaDeEdema.split(',')
-
-        this.historico.eliminacaoUrinaria = this.historico.eliminacaoUrinaria.split(',')
-
-        this.historico.hidratacao_Caracteristicas = this.historico.hidratacao_Caracteristicas.split(',')
-
-        this.historico.abdome = this.historico.abodme.split(',')
-
-        this.historico.olhos = this.historico.olhos.split(',')
-
-        let index = this.historico.olhos.indexOf('Icterícia')
-
-        if (index > -1) {
-          this.historico.olhosOpcoes = this.historico.olhos.splice(index, 1)
+        // atribuindo vias de administracao
+        this.historico.alimentacaoViasDeAdministracaoOpcoes = []
+        this.historico.alimentacaoViasDeAdministracaoOutros = []
+        for (let item of this.historico.alimentacao_ViasDeAdministracao.split(',')) {
+          if (item.toString() === 'Oral' || item.toString() === 'SNG' || item.toString() === 'SNE' || item.toString() === 'Parental') {
+            this.historico.alimentacaoViasDeAdministracaoOpcoes.push(item)
+          } else {
+            this.historico.alimentacaoViasDeAdministracaoOutros.push(item)
+          }
         }
 
-        this.historico.olhosOutros = this.historico.olhos
+        // atribuindo abdome
+        this.historico.abdomeOpcoes = []
+        this.historico.abdomeOutros = []
+        for (let item of this.historico.abdome.split(',')) {
+          if (item.toString() === 'Plano' || item.toString() === 'Globoso' || item.toString() === 'Distendido' || item.toString() === 'Doloroso à palpação') {
+            this.historico.abdomeOpcoes.push(item)
+          } else {
+            this.historico.abdomeOutros.push(item)
+          }
+        }
+
+        // atribuindo pele
+        this.historico.peleOpcoes = []
+        this.historico.peleOutros = []
+        for (let item of this.historico.pele.split(',')) {
+          if (item.toString() === 'Cianose' || item.toString() === 'Icterícia' || item.toString() === 'Petéquias' || item.toString() === 'Corado' || item.toString() === 'Hipocorado' || item.toString() === 'Hipercorado' || item.toString() === 'Equimoses' || item.toString() === 'Hematomas' || item.toString() === 'Escoriações') {
+            this.historico.peleOpcoes.push(item)
+          } else {
+            this.historico.peleOutros.push(item)
+          }
+        }
+
+        // atribuindo olhos
+        this.historico.olhosOpcoes = []
+        this.historico.olhosOutros = []
+        for (let item of this.historico.olhos.split(',')) {
+          if (item.toString() === 'Icterícia' || item.toString() === 'Endema de conjuntiva') {
+            this.historico.olhosOpcoes.push(item)
+          } else {
+            this.historico.olhosOutros.push(item)
+          }
+        }
+
+        // atribuindo genitalia
+        this.historico.genitaliaOpcoes = []
+        this.historico.genitaliaOutros = []
+        for (let item of this.historico.genitalia.split(',')) {
+          if (item.toString() === 'Sem anormalidades' || item.toString() === 'Secreção') {
+            this.historico.genitaliaOpcoes.push(item)
+          } else {
+            this.historico.genitaliaOutros.push(item)
+          }
+        }
       },
       function () {
         console.log('deu error')
       })
     },
     salvar () {
-      console.log(this.historico)
-
       this.historico.olhos = this.historico.olhosOpcoes.toString()
       this.historico.antecedentes = this.historico.antecedentesOpcoes.toString()
       this.historico.abdome = this.historico.abdomeOpcoes.toString()
 
-      console.log(this.historico)
+      // tratando o caso de traqueostomia e ventilacao mecanica que tem subintens
+      if (this.historico.oxigenacao === 'Traqueostomia') {
+        this.historico.oxigenacao = this.historico.oxigenacao + ',' + this.historico.traqueostomia
+      } else if (this.historico.oxigenacao === 'Ventilação mecânica') {
+        this.historico.oxigenacao = this.historico.oxigenacao + ',' + this.historico.ventilacaomecanica
+      }
+
+      // concatena o caso de pulso impalpavel (cheio ou filiforme)
+      if (this.historico.pulsoPalpabilidade === 'Impalpável') {
+        this.historico.pulsoPalpabilidade = this.historico.pulsoPalpabilidade + ',' + this.historico.impalpavel
+      }
+
+      // transforma antecedentes em string e concatena com outros
+      this.historico.antecedentes = this.historico.antecedentesOpcoes.toString() + ',' + this.historico.antecedentesOutros
+
+      // transforma a presenca de edema em string
+      this.historico.presencaDeEdema = this.historico.presencaDeEdemaOpcoes.toString()
+
+      // transforma eliminacaoUrinaria em string
+      this.historico.eliminacaoUrinaria = this.historico.eliminacaoUrinariaOpcoes.toString()
+
+      // transforma hidratacaoCaracteristicas em string
+      this.historico.hidratacao_Caracteristicas = this.historico.hidratacaoCaracteristicasOpcoes.toString() + ',' + this.historico.hidratacaoCaracteristicasOutros
+
+      // transforma vias de administracao em string
+      this.historico.alimentacao_ViasDeAdministracao = this.historico.alimentacaoViasDeAdministracaoOpcoes.toString() + ',' + this.historico.alimentacaoViasDeAdministracaoOutros
+
+      // transforma abdomeOpcoes em string
+      this.historico.abdome = this.historico.abdomeOpcoes.toString() + ',' + this.historico.abdomeOutros
+
+      // transforma pele em string
+      this.historico.pele = this.historico.peleOpcoes.toString() + ',' + this.historico.peleOutros
+
+      // transforma olhos em string
+      this.historico.olhos = this.historico.olhosOpcoes.toString() + ',' + this.historico.olhosOutros
+
+      // transforma genitalia em string
+      this.historico.genitalia = this.historico.genitaliaOpcoes.toString() + ',' + this.historico.genitaliaOutros
 
       $.post('http://localhost/sae/editHistorico.php', JSON.stringify(this.historico))
         .then(res => {

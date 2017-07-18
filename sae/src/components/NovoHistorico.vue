@@ -1,4 +1,4 @@
-hidratacaoCaracteristicasOpcoes<template>
+<template>
   <body class="">
 
       <!-- Container -->
@@ -599,8 +599,6 @@ export default {
   },
   methods: {
     salvar () {
-      console.log(this.historico)
-
       this.historico.olhos = this.historico.olhosOpcoes.toString()
       this.historico.antecedentes = this.historico.antecedentesOpcoes.toString()
       this.historico.abdome = this.historico.abdomeOpcoes.toString()
@@ -643,7 +641,6 @@ export default {
 
       // transforma genitalia em string
       this.historico.genitalia = this.historico.genitaliaOpcoes.toString() + ',' + this.historico.genitaliaOutros
-      console.log(this.historico.genitalia)
 
       $.post('http://localhost/sae/addHistorico.php', JSON.stringify(this.historico))
         .then(res => {
