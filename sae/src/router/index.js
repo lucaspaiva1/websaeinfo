@@ -8,6 +8,7 @@ import Paciente from '@/components/Paciente'
 import NovoHistorico from '@/components/NovoHistorico'
 import Historico from '@/components/Historico'
 import HistoricoEnfermagem from '@/components/HistoricoEnfermagem'
+import Usuarios from '@/components/Usuarios'
 
 Vue.use(Router)
 
@@ -52,6 +53,12 @@ export default new Router({
       path: '/HistoricoEnfermagem',
       name: 'HistoricoEnfermagem',
       component: HistoricoEnfermagem
+    },
+    {
+      path: '/saeinfo/usuarios',
+      name: 'Usuarios',
+      component: Usuarios
     }
+
   ]
 })

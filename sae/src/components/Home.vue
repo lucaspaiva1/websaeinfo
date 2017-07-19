@@ -10,6 +10,20 @@
               <h1>Sistematização da Assistência de Enfermagem</h1>
 
               <div id="content-main">
+                <div class="app-auth module">
+                  <table>
+                    <caption>
+                        <a class="section" title="Modelos na aplicação Autenticação e Autorização">Autenticação e Autorização</a>
+                    </caption>
+                    <tbody>
+                      <tr class="model-user">
+                        <th scope="row"><a href="#/saeinfo/usuarios">Usuários</a></th>
+                          <td><a class="addlink">Adicionar</a></td>
+                          <td><a class="changelink">Listar</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
 
                   <div class="app-SaeApp module">
                       <table>
