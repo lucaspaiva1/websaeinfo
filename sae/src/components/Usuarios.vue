@@ -9,8 +9,7 @@
 
       <div class="breadcrumbs">
         <a href="/#/saeinfo/">Início</a> ›
-        <a href="/#/saeinfo/usuarios">Autenticação e Autorização</a>
-        › Usuários
+        <a href="/#/saeinfo/usuarios">Usuários</a>
       </div>
 
       <!-- Content -->
@@ -20,7 +19,7 @@
         <div id="content-main">
           <ul class="object-tools">
                 <li>
-                  <a href="/auth/user/add/" class="addlink">
+                  <a href="/#/saeinfo/usuario/novo" class="addlink">
                     Adicionar usuário
                   </a>
                 </li>
@@ -122,8 +121,8 @@
 
                 </table>
               </div>
-              <p class="paginator">
-                3 usuários
+              <p v-if="usuarios" class="paginator">
+                  {{usuarios.length}} Usuários
               </p>
             </form>
           </div>

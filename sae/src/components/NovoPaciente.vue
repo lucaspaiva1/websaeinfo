@@ -19,96 +19,96 @@
 
                     <form method="post" @submit.prevent v-on:submit="cadastrar" id="paciente_form">
                         <div>
-                            <fieldset class="module aligned ">
+                          <fieldset class="module aligned ">
 
-                                <div class="form-row field-Nome field-Idade field-Sexo">
-                                    <div class="field-box field-Nome">
-                                        <label class="required" for="id_Nome">Nome:</label>
+                              <div class="form-row field-Nome field-Idade field-Sexo">
+                                  <div class="field-box field-Nome">
+                                      <label class="required" for="id_Nome">Nome:</label>
 
-                                        <input class="vTextField" id="id_Nome" maxlength="60" type="text" v-model="paciente.Nome">
-                                    </div>
-                                    <div class="field-box field-Idade">
-                                        <label class="inline" for="id_Idade">Idade:</label>
-                                        <input class="vTextField" id="id_Idade" maxlength="3" type="text" v-model="paciente.Idade">
+                                      <input class="vTextField" id="id_Nome" maxlength="60" type="text" v-model="paciente.Nome">
+                                  </div>
+                                  <div class="field-box field-Idade">
+                                      <label class="inline" for="id_Idade">Idade:</label>
+                                      <input class="vTextField" id="id_Idade" maxlength="3" type="text" v-model="paciente.Idade">
 
-                                    </div>
-                                    <div class="field-box field-Sexo">
-                                        <label class="inline" for="id_Sexo">Sexo:</label>
+                                  </div>
+                                  <div class="field-box field-Sexo">
+                                      <label class="inline" for="id_Sexo">Sexo:</label>
 
-                                        <select id="id_Sexo" name="Sexo" v-model="paciente.Sexo">
-                                      <option value="">---------</option>
-                                      <option value="masculino">Masculino</option>
-                                      <option value="feminino">Feminino</option>
-                                    </select>
-                                    </div>
-                                </div>
+                                      <select id="id_Sexo" name="Sexo" v-model="paciente.Sexo">
+                                    <option value="">---------</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                  </select>
+                                  </div>
+                              </div>
 
-                                <div class="form-row field-Religiao field-Profissao field-Estado_Civil">
-                                    <div class="field-box field-Religiao">
-                                        <label for="id_Religiao">Religião:</label>
-                                        <input class="vTextField" id="id_Religiao" maxlength="50" type="text" v-model="paciente.Religiao">
-                                    </div>
-                                    <div class="field-box field-Profissao">
-                                        <label class="inline" for="id_Profissao">Profissão:</label>
-                                        <input class="vTextField" id="id_Profissao" maxlength="50" type="text" v-model="paciente.Profissao">
-                                    </div>
-                                    <div class="field-box field-Estado_Civil">
-                                        <label class="inline" for="id_Estado_Civil">Estado Civil:</label>
-                                        <select id="id_Estado_Civil" v-model="paciente.Estado_Civil">
-                                      <option value="">---------</option>
-                                      <option value="Casado">Casado</option>
-                                      <option value="Divorciado">Divorciado</option>
-                                      <option value="Solteiro">Solteiro</option>
-                                      <option value="Viúvo">Viúvo</option>
-                                    </select>
-                                    </div>
-                                </div>
-                                <div class="form-row field-Naturalidade field-Procedencia field-Data_de_internacao">
+                              <div class="form-row field-Religiao field-Profissao field-Estado_Civil">
+                                  <div class="field-box field-Religiao">
+                                      <label for="id_Religiao">Religião:</label>
+                                      <input class="vTextField" id="id_Religiao" maxlength="50" type="text" v-model="paciente.Religiao">
+                                  </div>
+                                  <div class="field-box field-Profissao">
+                                      <label class="inline" for="id_Profissao">Profissão:</label>
+                                      <input class="vTextField" id="id_Profissao" maxlength="50" type="text" v-model="paciente.Profissao">
+                                  </div>
+                                  <div class="field-box field-Estado_Civil">
+                                      <label class="inline" for="id_Estado_Civil">Estado Civil:</label>
+                                      <select id="id_Estado_Civil" v-model="paciente.Estado_Civil">
+                                    <option value="">---------</option>
+                                    <option value="Casado">Casado</option>
+                                    <option value="Divorciado">Divorciado</option>
+                                    <option value="Solteiro">Solteiro</option>
+                                    <option value="Viúvo">Viúvo</option>
+                                  </select>
+                                  </div>
+                              </div>
+                              <div class="form-row field-Naturalidade field-Procedencia field-Data_de_internacao">
 
-                                    <div class="field-box field-Naturalidade">
-                                        <label for="id_Naturalidade">Naturalidade:</label>
-                                        <input class="vTextField" id="id_Naturalidade" maxlength="50" type="text" v-model="paciente.Naturalidade">
-                                    </div>
-                                    <div class="field-box field-Procedencia">
-                                        <label class="inline" for="id_Procedencia">Procedência:</label>
-                                        <input class="vTextField" id="id_Procedencia" maxlength="50" type="text" v-model="paciente.Procedencia">
-                                    </div>
-                                    <div class="field-box field-Data_de_internacao">
-                                        <label class="required inline" for="id_Data_de_internacao">Data de internação:</label>
-                                        <input class="vDateField" id="id_Data_de_internacao" size="10" type="date" v-model="paciente.Data_de_internacao"><span class="datetimeshortcuts">&nbsp;<a class='todaybutton' v-on:click="today">Hoje</a></span>
-                                    </div>
-                                </div>
-                                <div class="form-row field-Registro field-Internacao_Anterior">
-                                    <div class="field-box field-Registro">
-                                        <label for="id_Registro">Registro:</label>
-                                        <input class="vTextField" id="id_Registro" maxlength="40" type="text" v-model="paciente.Registro">
-                                    </div>
-                                </div>
-                                <div class="form-row field-Setor_de_Procedencia field-Leito">
-                                    <div class="field-box field-Setor_de_Procedencia">
-                                        <label for="id_Setor_de_Procedencia">Setor de Procedência:</label>
-                                        <input class="vTextField" id="id_Setor_de_Procedencia" maxlength="50" type="text" v-model="paciente.Setor_de_Procedencia">
-                                    </div>
-                                    <div class="field-box field-Setor_de_Procedencia">
-                                        <label for="id_Clinica">Clinica:</label>
-                                        <input class="vTextField" id="id_Clinica" maxlength="50" type="text" v-model="paciente.Clinica">
-                                    </div>
-                                    <div class="field-box field-Leito">
-                                        <label class="inline" for="id_Leito">Leito:</label>
-                                        <input class="vTextField" id="id_Leito" maxlength="50" type="text" v-model="paciente.Leito">
-                                    </div>
-                                </div>
-                                <div class="form-row field-Diagnostico_Medico">
-                                    <div>
-                                        <label for="id_Diagnostico_Medico">Diagnóstico Médico:</label>
-                                        <textarea class="vLargeTextField" cols="40" id="id_Diagnostico_Medico" rows="10" v-model="paciente.Diagnostico_Medico"></textarea>
-                                    </div>
-                                </div>
+                                  <div class="field-box field-Naturalidade">
+                                      <label for="id_Naturalidade">Naturalidade:</label>
+                                      <input class="vTextField" id="id_Naturalidade" maxlength="50" type="text" v-model="paciente.Naturalidade">
+                                  </div>
+                                  <div class="field-box field-Procedencia">
+                                      <label class="inline" for="id_Procedencia">Procedência:</label>
+                                      <input class="vTextField" id="id_Procedencia" maxlength="50" type="text" v-model="paciente.Procedencia">
+                                  </div>
+                                  <div class="field-box field-Data_de_internacao">
+                                      <label class="required inline" for="id_Data_de_internacao">Data de internação:</label>
+                                      <input class="vDateField" id="id_Data_de_internacao" size="10" type="date" v-model="paciente.Data_de_internacao"><span class="datetimeshortcuts">&nbsp;<a class='todaybutton' v-on:click="today">Hoje</a></span>
+                                  </div>
+                              </div>
+                              <div class="form-row field-Registro field-Internacao_Anterior">
+                                  <div class="field-box field-Registro">
+                                      <label for="id_Registro">Registro:</label>
+                                      <input class="vTextField" id="id_Registro" maxlength="40" type="text" v-model="paciente.Registro">
+                                  </div>
+                              </div>
+                              <div class="form-row field-Setor_de_Procedencia field-Leito">
+                                  <div class="field-box field-Setor_de_Procedencia">
+                                      <label for="id_Setor_de_Procedencia">Setor de Procedência:</label>
+                                      <input class="vTextField" id="id_Setor_de_Procedencia" maxlength="50" type="text" v-model="paciente.Setor_de_Procedencia">
+                                  </div>
+                                  <div class="field-box field-Setor_de_Procedencia">
+                                      <label for="id_Clinica">Clinica:</label>
+                                      <input class="vTextField" id="id_Clinica" maxlength="50" type="text" v-model="paciente.Clinica">
+                                  </div>
+                                  <div class="field-box field-Leito">
+                                      <label class="inline" for="id_Leito">Leito:</label>
+                                      <input class="vTextField" id="id_Leito" maxlength="50" type="text" v-model="paciente.Leito">
+                                  </div>
+                              </div>
+                              <div class="form-row field-Diagnostico_Medico">
+                                  <div>
+                                      <label for="id_Diagnostico_Medico">Diagnóstico Médico:</label>
+                                      <textarea class="vLargeTextField" cols="40" id="id_Diagnostico_Medico" rows="10" v-model="paciente.Diagnostico_Medico"></textarea>
+                                  </div>
+                              </div>
 
-                            </fieldset>
-                            <div class="submit-row">
-                                <button type="submit">Salvar</button>
-                            </div>
+                          </fieldset>
+                          <div class="submit-row">
+                              <button type="submit">Salvar</button>
+                          </div>
                         </div>
                     </form>
                 </div>
