@@ -46,12 +46,12 @@ export default new Router({
       component: NovoHistorico
     },
     {
-      path: '/saeinfo/paciente/:idpaciente/historico/',
+      path: '/saeinfo/paciente/:idpaciente/historico',
       name: 'Historico',
       component: Historico
     },
     {
-      path: '/HistoricoEnfermagem',
+      path: '/saeinfo/paciente/:idpaciente/HistoricoEnfermagem',
       name: 'HistoricoEnfermagem',
       component: HistoricoEnfermagem
     },

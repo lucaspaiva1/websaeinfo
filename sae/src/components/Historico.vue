@@ -11,9 +11,10 @@
           <div class="breadcrumbs">
               <a href="#/saeinfo">Início</a>
           </div>
+          <div class="print">
+            <a :href="'/#/saeinfo/paciente/'+$route.params.idpaciente+'/HistoricoEnfermagem'" type="button" name="button">Tela de Impressão</a>
+          </div>
           <div id="main-content" action="" style="line-height: 25px;" method="POST">
-              <input type='text' name="idPaciente" value='2' readonly="readonly" style="display:none;">
-
               <fieldset class="module aligned ">
                   <fieldset class="module aligned ">
                       <b>I. ENTREVISTA</b>
@@ -372,11 +373,17 @@
                   <label for='eliminacaoIntestinal_frequencia' placeholder="vezes/ semana">Frequência: </label>
                   <input type="text" name="eliminacaoIntestinal_frequencia" id="eliminacaoIntestinal_frequencia" v-model="historico.eliminacaoIntestinal_frequencia">
                   <br>
-                  <input type="radio" name="eliminacaoIntestinal" id="ElimiNormal" value="Normal"> <label for="ElimiNormal">Normal</label>
-                  <input type="radio" name="eliminacaoIntestinal" id="ElimiConsti" value="Constipação"> <label for="ElimiConsti">Constipação</label>
-                  <input type="radio" name="eliminacaoIntestinal" id="Diarréia" value="Diarréia"> <label for="Diarréia">Diarréia</label>
-                  <input type="radio" name="eliminacaoIntestinal" id="ElimiIncontinência" value="Incontinência"> <label for="ElimiIncontinência">Incontinência</label>
-                  <input type="radio" name="eliminacaoIntestinal" id="OutrosElimi"> <label for="OutrosElimi">Outros </label><input type="text" name="eliminacaoIntestinal" id="OutrosElimi">
+                  <input type="radio" name="eliminacaoIntestinal" id="ElimiNormal" value="Normal" v-model="historico.eliminacaoIntestinal">
+                  <label for="ElimiNormal">Normal</label>
+                  <input type="radio" name="eliminacaoIntestinal" id="ElimiConsti" value="Constipação" v-model="historico.eliminacaoIntestinal">
+                  <label for="ElimiConsti">Constipação</label>
+                  <input type="radio" name="eliminacaoIntestinal" id="Diarréia" value="Diarréia" v-model="historico.eliminacaoIntestinal">
+                  <label for="Diarréia">Diarréia</label>
+                  <input type="radio" name="eliminacaoIntestinal" id="ElimiIncontinência" value="Incontinência" v-model="historico.eliminacaoIntestinal">
+                  <label for="ElimiIncontinência">Incontinência</label>
+                  <input type="radio" name="eliminacaoIntestinal" id="OutrosElimi" v-model="historico.eliminacaoIntestinal">
+                  <label for="OutrosElimi">Outros</label>
+                  <input type="text" name="eliminacaoIntestinal" id="OutrosElimi" v-model="historico.eliminacaoIntestinal">
 
 
                   <fieldset class="module aligned ">
@@ -759,7 +766,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* DASHBOARD */
-
 .dashboard .module table th {
     width: 100%;
 }
@@ -787,6 +793,10 @@ ul.actionlist li {
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
+}
+
+.print{
+  text-align: right !important;
 }
 
 </style>

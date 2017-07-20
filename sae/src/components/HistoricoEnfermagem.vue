@@ -5,7 +5,7 @@
   <div id="container">
 
     <!-- Header -->
-      <NavBar></NavBar>
+    <NavBar></NavBar>
     <!-- END Header -->
 
     <div class="breadcrumbs">
@@ -48,24 +48,24 @@
 
               <tr>
                 <td class="tg-yw4l" style="line-height: 1.5; text-align: justify;">
-                  <b>NOME:</b> Rafael da Silva
-                  <span style="padding-left:80px"><b>SEXO: </b> Masculino </span>
+                  <b>NOME:</b> {{paciente.Nome}}
+                  <span style="padding-left:80px"><b>SEXO: </b> {{paciente.Sexo}} </span>
                   <hr>
 
-                  <b>IDADE:</b> 23 anos
-                  <span style="padding-left:60px"><b>ESTADO CIVIL:</b>  Solteiro </span>
-                  <span style="padding-left:60px"><b>RELIGIÃO:</b> Católico </span>
+                  <b>IDADE:</b> {{paciente.Idade}} anos
+                  <span style="padding-left:60px"><b>ESTADO CIVIL:</b>  {{paciente.Estado_Civil}} </span>
+                  <span style="padding-left:60px"><b>RELIGIÃO:</b> {{paciente.Religiao}} </span>
                   <hr>
 
-                  <b>PROFISSÃO:</b> Estudante
-                  <span style="padding-left:60px"> <b>NATURALIDADE:</b>   </span>
+                  <b>PROFISSÃO:</b> {{paciente.Profissao}}
+                  <span style="padding-left:60px"> <b>NATURALIDADE:</b> {{paciente.Naturalidade}} </span>
                   <hr>
 
-                  <b>REGISTRO:</b>
-                  <span style="padding-left:40px"><b>LEITO:</b>   </span>
-                  <span style="padding-left:40px"><b>SETOR DE PROCEDÊNCIA:</b>   </span>
+                  <b>REGISTRO:</b> {{paciente.Registro}}
+                  <span style="padding-left:40px"><b>LEITO:</b> {{paciente.Leito}} </span>
+                  <span style="padding-left:40px"><b>SETOR DE PROCEDÊNCIA:</b> {{paciente.Setor_de_Procedencia}}  </span>
                   <hr>
-                  <b>INTERNADO(A) em:</b> 25 de Abril de 2017
+                  <b>INTERNADO(A) em:</b> {{paciente.Data_de_internacao}}
                   <hr>
                 </td>
 
@@ -75,15 +75,15 @@
               </tr>
               <tr>
                 <td class="tg-yw4l" style="line-height: 1.5">
-                  <b>INTERNAÇÃO ANTERIOR (nº de vezes):</b>
+                  <b>INTERNAÇÃO ANTERIOR (nº de vezes):</b> {{paciente.internacoes}}
                   <hr>
-                  <b>MOTIVO:</b>
+                  <b>MOTIVO:</b> {{paciente.motivoInternacao}}
                   <hr>
-                  <b>ANTECEDENTES:</b>
+                  <b>ANTECEDENTES:</b> {{paciente.antecedentes}}
                   <hr>
-                  <b>ALERGIAS:</b>
+                  <b>ALERGIAS:</b> {{paciente.alergias}}
                   <hr>
-                  <b>VACINAS:</b>
+                  <b>VACINAS:</b> {{paciente.vacinas}}
                 </td>
               </tr>
               <tr>
@@ -97,85 +97,23 @@
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                Consciência:
-                  <input type="checkbox" name="check" id="Alerta">
-                  <label for="Alerta">Alerta</label>
-                  <input type="checkbox" name="check" id="Letárgico">
-                  <label for="Letárgico">Letárgico</label>
-                  <input type="checkbox" name="check" id="Obnubilado">
-                  <label for="Obnubilado">Obnubilado</label>
-                  <input type="checkbox" name="check" id="Torporoso">
-                  <label for="Torporoso">Torporoso</label>
-                  <input type="checkbox" name="check" id="Comatoso">
-                  <label for="Comatoso">Comatoso</label>
-                  <label for="Glasgow">
-                    Glasgow:
-                  </label>
+                  <b>Consciência:</b> {{paciente.consciencia}}
                   <hr>
                   <br>
-                  Pupilas:
-                  <input type="checkbox" name="check" id="Isocóricas">
-                  <label for="Isocóricas">Isocóricas</label>
-                  <input type="checkbox" name="check" id="Anisocóricas">
-                  <label for="Anisocóricas">Anisocóricas</label>
-                  <input type="checkbox" name="check" id="Miose">
-                  <label for="Miose">Miose</label>
-                  <input type="checkbox" name="check" id="Midríase">
-                  <label for="Midríase">Midríase</label>
-                  <input type="checkbox" name="check" id="RFM">
-                  <label for="RFM">RFM</label>
-                  <hr> <br> Mobilidade Física: <br><br>
-                              MMSS (Direito):
-                              <input type="checkbox" name="check" id="Preservada">
-                              <label for="Preservada">Preservada</label>
-                              <input type="checkbox" name="check" id="Paresia">
-                              <label for="Paresia">Paresia</label>
-                              <input type="checkbox" name="check" id="Plegia">
-                              <label for="Plegia">Plegia</label>
-                              <input type="checkbox" name="check" id="Parestesia">
-                              <label for="Parestesia">Parestesia</label> <br>
-                              MMSS (Esquerdo):
-                              <input type="checkbox" name="check" id="Preservada2">
-                              <label for="Preservada2">Preservada</label>
-                              <input type="checkbox" name="check" id="Paresia2">
-                              <label for="Paresia2">Paresia</label>
-                              <input type="checkbox" name="check" id="Plegia2">
-                              <label for="Plegia2">Plegia</label>
-                              <input type="checkbox" name="check" id="Parestesia2">
-                              <label for="Parestesia2">Parestesia</label>
-                              <br>
-                              MMII (Direito):
-                              <input type="checkbox" name="check" id="Preservada3">
-                              <label for="Preservada3">Preservada</label>
-                              <input type="checkbox" name="check" id="Paresia3">
-                              <label for="Paresia3">Paresia</label>
-                              <input type="checkbox" name="check" id="Plegia3">
-                              <label for="Plegia3">Plegia</label>
-                              <input type="checkbox" name="check" id="Parestesia3">
-                              <label for="Parestesia3">Parestesia</label> <br>
-                              MMII (Esquerdo):
-                              <input type="checkbox" name="check" id="Preservada4">
-                              <label for="Preservada4">Preservada</label>
-                              <input type="checkbox" name="check" id="Paresia4">
-                              <label for="Paresia4">Paresia</label>
-                              <input type="checkbox" name="check" id="Plegia4">
-                              <label for="Plegia4">Plegia</label>
-                              <input type="checkbox" name="check" id="Parestesia4">
-                              <label for="Parestesia4">Parestesia</label>
-                              <hr>
-                              <br>
-                              Fala e linguagem:
-                              <input type="checkbox" name="check" id="Afonia">
-                              <label for="Afonia">Afonia</label>
-                              <input type="checkbox" name="check" id="Dislalia">
-                              <label for="Dislalia">Dislalia</label>
-                              <input type="checkbox" name="check" id="Disartria">
-                              <label for="Disartria">Disartria</label>
-                              <input type="checkbox" name="check" id="Disfasia">
-                              <label for="Disfasia">Disfasia</label>
-                              <input type="checkbox" name="check" id="Afasia">
-                              <label for="Afasia">Afasia</label>
-                  </span>
+                  <b>Glasgow:</b> {{paciente.glasgow}}
+                  <hr>
+                  <br>
+                  <b>Pupilas:</b> {{paciente.pupilas}}
+                  <hr>
+                  <br>
+                  <b>Mobilidade Física:</b>
+                  <p>MMSS (Direito): {{paciente.mmss_direito}}   </p>
+                  <p>MMSS (Esquerdo): {{paciente.mmss_esquerdo}} </p>
+                  <p>MMII (Direito): {{paciente.mmii_direito}}   </p>
+                  <p>MMII (Esquerdo): {{paciente.mmii_esquerdo}} </p>
+                  <hr>
+                  <br>
+                  <b>Fala e linguagem:</b> {{paciente.falaELinguagem}}
                 </td>
               </tr>
               <tr>
@@ -183,116 +121,66 @@
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                  Respiração:
-                  <input type="checkbox" name="check" id="Dispineia">
-                  <label for="Dispineia">Dispineia</label>
-                  <input type="checkbox" name="check" id="Taquipnéia">
-                  <label for="Taquipnéia">Taquipnéia</label>
-                  <input type="checkbox" name="check" id="Bradipnéia">
-                  <label for="Bradipnéia">Bradipnéia</label>
-                  <input type="checkbox" name="check" id="HiperventilaçãoNeurogênicaCentral">
-                  <label for="HiperventilaçãoNeurogênicaCentral">Hiperventilação Neurogênica Central</label>
-                  <input type="checkbox" name="check" id="Espontânea">
-                  <label for="Espontânea">Espontânea</label>
-                  <input type="checkbox" name="check" id="Catéter">
-                  <label for="Catéter">Catéter</label>
-                  <input type="checkbox" name="check" id="Máscara">
-                  <label for="Máscara">Máscara</label>
-
-                  <br>
-
-                  <input type="checkbox" name="check" id="Traqueostomia">
-                  <label for="Traqueostomia">Traqueostomia</label>
-                  <input type="checkbox" name="check" id="Ventilaçãomecânica">
-                  <label for="Ventilaçãomecânica">Ventilação mecânica</label>
-                  <input type="checkbox" name="check" id="RespiracaoOutros">
-                  <label for="RespiracaoOutros">Outros</label>
-
-                  <br>
-
+                  <b>Respiração:</b> {{paciente.oxigenacao}}
                   <hr>
-
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">O²:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">SpO²:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">FR:</td>
+                      <td class="tdata"><b>O²:</b></td>
+                      <td class="tdata">{{paciente.O2}}</td>
+                      <td class="tdata"><b>SpO²:</b></td>
+                      <td class="tdata">{{paciente.SpO2}}</td>
+                      <td class="tdata"><b>FR:</b></td>
+                      <td class="tdata">{{paciente.FR}}</td>
                     </tr>
                   </table>
                   <hr>
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">Modalidade:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">FiO²:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">PEEP:</td>
+                      <td class="tdata"><b>Modalidade:</b></td>
+                      <td class="tdata">{{paciente.modalidade}}</td>
+                      <td class="tdata"><b>FiO²:</b></td>
+                      <td class="tdata">{{paciente.FiO2}}</td>
+                      <td class="tdata"><b>PEEP:</b></td>
+                      <td class="tdata">{{paciente.Peep}}</td>
                     </tr>
                   </table>
                   <hr>
                   <br>
-                  Asculta Pulmonar: MV Presentes
-                  <input type="checkbox" name="check" id="Bilateralmente">
-                  <label for="Bilateralmente">Bilateralmente</label>
-                  <input type="checkbox" name="check" id="Diminuídos">
-                  <label for="Diminuídos">Diminuídos</label>
-                  <input type="checkbox" name="check" id="Ausentes">
-                  <label for="Ausentes">Ausentes</label>
+                  <b>Asculta Pulmonar</b>
                   <hr>
                   <br>
-                  Ruídos adventícios:
-                  <input type="checkbox" name="check" id="Roncos">
-                  <label for="Roncos">Roncos</label>
-                  <input type="checkbox" name="check" id="Sibilos">
-                  <label for="Sibilos">Sibilos</label>
-                  <input type="checkbox" name="check" id="Estertores">
-                  <label for="Estertores">Estertores</label>
+                  MV Presentes: {{paciente.auscultaPulmonar_MvPresente}}
                   <hr>
-                  <br>
-                  Presenção de tosse:
-                  <input type="checkbox" name="check" id="Não">
-                  <label for="Não">Não</label>
-                  <input type="checkbox" name="check" id="Seca">
-                  <label for="Seca">Seca</label>
-                  <input type="checkbox" name="check" id="Produtiva">
-                  <label for="Produtiva">Produtiva</label>
+                  <br> Ruídos adventícios: {{paciente.auscultaPulmonar_Ruidos}}
+                  <hr>
+                  <br> Presenção de tosse: {{paciente.prevencaoDeTosse}}
                   <hr>
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">Aspiração:</td>
-                      <td style="border-style: none !important;">Quantidade:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">Característica:</td>
-                      <td style="border-style: none !important;"></td>
+                      <td class="tdata"><b>Aspiração:</b></td>
+                      <td class="tdata">Quantidade:</td>
+                      <td class="tdata">{{paciente.aspiracaoQuantidade}}</td>
+                      <td class="tdata">Característica:</td>
+                      <td class="tdata">{{paciente.aspiracaoCaracteristica}}</td>
                     </tr>
                   </table>
                   <hr>
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">Drenagem Torácica:</td>
-                      <td style="border-style: none !important;">Quantidade:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">Característica:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;"><input type="checkbox" name="check" id="DTD">
-                      <label for="DTD">DTD</label></td>
-                      <td style="border-style: none !important;"><input type="checkbox" name="check" id="DTE">
-                      <label for="DTE">DTE</label></td>
+                      <td class="tdata"><b>Drenagem Torácica:</b></td>
+                      <td class="tdata">Quantidade:</td>
+                      <td class="tdata">{{paciente.drenagemQuantidade}}</td>
+                      <td class="tdata">Característica:</td>
+                      <td class="tdata">{{paciente.drenagemCaracteristica}}</td>
+                      <td class="tdata"><input type="checkbox" disabled name="check" id="DTD" v-model="paciente.drenagemToracicaDTD">
+                        <label for="DTD">DTD</label></td>
+                      <td class="tdata"><input type="checkbox" disabled name="check" id="DTE" v-model="paciente.drenagemToracicaDTD">
+                        <label for="DTE">DTE</label></td>
                     </tr>
                   </table>
                   <hr>
                   <br>
-                  Mamas:
-                  <input type="checkbox" name="check" id="Semalterações">
-                  <label for="Semalterações">Sem alterações</label>
-                  <input type="checkbox" name="check" id="Nódulos">
-                  <label for="Nódulos">Nódulos</label>
-                  <input type="checkbox" name="check" id="Dor">
-                  <label for="Dor">Dor</label>
-                  <input type="checkbox" name="check" id="Assimétricas">
-                  <label for="Assimétricas">Assimétricas</label>
+                  <b>Mamas:</b> {{paciente.mamas}}
                 </td>
               </tr>
               <tr>
@@ -302,43 +190,24 @@
                 <td class="tg-yw4l">
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">FC: (bpm)</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">PA: (mmHg)</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">PVC: (cmH20)</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">PAM: (mmHg)</td>
-                      <td style="border-style: none !important;"></td>
+                      <td class="tdata"><b>FC</b>(bpm):</td>
+                      <td class="tdata">{{paciente.avaliacaoCardiovascular_Fc}}.</td>
+                      <td class="tdata"><b>PA</b>(mmHg):</td>
+                      <td class="tdata">{{paciente.avaliacaoCardiovascular_Pa}}.</td>
+                      <td class="tdata"><b>PVC</b>(cmH20):</td>
+                      <td class="tdata">{{paciente.avaliacaoCardiovascular_PVC}}.</td>
+                      <td class="tdata"><b>PAM</b>(mmHg):</td>
+                      <td class="tdata">{{paciente.avaliacaoCardiovascular_PAM}}.</td>
                     </tr>
                   </table>
                   <hr>
                   <br>
-                  Pulso:
-                  <input type="checkbox" name="check" id="Regular">
-                  <label for="Regular">Regular</label>
-                  <input type="checkbox" name="check" id="Irregular">
-                  <label for="Irregular">Irregular</label>
-                  <input type="checkbox" name="check" id="Impalpável">
-                  <label for="Impalpável">Impalpável</label>
-                  <input type="checkbox" name="check" id="Palpável">
-                  <label for="Palpável">Palpável</label>
-                  <input type="checkbox" name="check" id="Cheio">
-                  <label for="Cheio">Cheio</label>
-                  <input type="checkbox" name="check" id="Filiforme">
-                  <label for="Filiforme">Filiforme</label>
+                  <b>Pulso:</b> {{paciente.pulso}}
+                  <br>
+                  <br>
                   <hr>
                   <br>
-                  Presença de edema:
-                  <input type="checkbox" name="check" id="Pés">
-                  <label for="Pés">Pés</label>
-                  <input type="checkbox" name="check" id="MMII">
-                  <label for="MMII">MMII</label>
-                  <input type="checkbox" name="check" id="MMSS">
-                  <label for="MMSS">MMSS</label>
-                  <input type="checkbox" name="check" id="Anasarca">
-                  <label for="Anasarca">Anasarca</label>
-
+                  <b>Presença de edema:</b> {{paciente.presencaDeEdema}}
                 </td>
               </tr>
               <tr>
@@ -346,39 +215,13 @@
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                  Turgidez da pele:
-                  <input type="checkbox" name="check" id="Preservada">
-                  <label for="Preservada">Preservada</label>
-                  <input type="checkbox" name="check" id="Diminuída">
-                  <label for="Diminuída">Diminuída</label>
+                  <b>Turgidez da pele:</b> {{paciente.turgidezDaPele}}
                   <hr>
                   <br>
-                  Eliminação urinária Volume: (ml;h)
+                  <b>Eliminação urinária Volume </b>(ml;h): {{paciente.eliminacaoUrinaria_Volume}}
                   <hr>
                   <br>
-                  Características:
-                  <input type="checkbox" name="check" id="Espontânea">
-                  <label for="Espontânea">Espontânea</label>
-                  <input type="checkbox" name="check" id="Retenção">
-                  <label for="Retenção">Retenção</label>
-                  <input type="checkbox" name="check" id="Incontinência">
-                  <label for="Incontinência">Incontinência</label>
-                  <input type="checkbox" name="check" id="SVD">
-                  <label for="SVD">SVD</label>
-                  <input type="checkbox" name="check" id="Dispositivourinário">
-                  <label for="Dispositivourinário">Dispositivo urinário</label>
-                  <input type="checkbox" name="check" id="Disúria">
-                  <label for="Disúria">Disúria</label>
-                  <input type="checkbox" name="check" id="Oligúria">
-                  <label for="Oligúria">Oligúria</label>
-                  <input type="checkbox" name="check" id="Oligúria">
-                  <label for="SVD">Anúria</label>
-                  <br>
-                  <input type="checkbox" name="check" id="Poliúria">
-                  <label for="Poliúria">Poliúria</label>
-                  <input type="checkbox" name="check" id="Hematúria">
-                  <label for="Hematúria">Hematúria</label>
-                  , Outros:
+                  <b>Características:</b> {{paciente.eliminacaoUrinaria}}
                 </td>
               </tr>
               <tr>
@@ -388,78 +231,35 @@
                 <td class="tg-yw4l">
                   <table>
                     <tr>
-                      <td style="border-style: none !important;">Tipo de dieta:</td>
-                      <td style="border-style: none !important;"></td>
-                      <td style="border-style: none !important;">Glicemia:</td>
-                      <td style="border-style: none !important;"></td>
+                      <td class="tdata"><b>Tipo de dieta:</b></td>
+                      <td class="tdata">{{paciente.tipoDeDieta}}.</td>
+                      <td class="tdata"><b>Glicemia:</b></td>
+                      <td class="tdata">{{paciente.glicemia}}</td>
                     </tr>
                   </table>
                   <hr>
                   <br>
-                  Vias de administração:
-                  <input type="checkbox" name="check" id="Oral">
-                  <label for="Oral">Oral</label>
-                  <input type="checkbox" name="check" id="SNG">
-                  <label for="SNG">SNG</label>
-                  <input type="checkbox" name="check" id="SNE">
-                  <label for="SNE">SNE</label>
-                  <input type="checkbox" name="check" id="Parenteral">
-                  <label for="Parenteral">Parenteral</label>
-                  , Outros:
+                  <b>Vias de administração:</b> {{paciente.alimentacao_ViasDeAdministracao}}
                   <hr>
                   <br>
-                  Abdome:
-                  <input type="checkbox" name="check" id="Plano">
-                  <label for="Plano">Plano</label>
-                  <input type="checkbox" name="check" id="Globoso">
-                  <label for="Globoso">Globoso</label>
-                  <input type="checkbox" name="check" id="Distendido">
-                  <label for="Distendido">Distendido</label>
-                  <input type="checkbox" name="check" id="Dolorosoàpalpação">
-                  <label for="Dolorosoàpalpação">Doloroso à palpação</label>
-                  , Outros:
+                  <b>Abdome:</b> {{paciente.abdome}}
                   <hr>
                   <br>
-                  Presenção de:
-                  <input type="checkbox" name="check" id="Náusea">
-                  <label for="Náusea">Náusea</label>
-                  <input type="checkbox" name="check" id="Vômito">
-                  <label for="Vômito">Vômito</label>
+                  <b>Presenção de:</b> {{paciente.presencaoDe}}
                   <hr>
                   <br>
-                  RHA:
-                  <input type="checkbox" name="check" id="Ausentes">
-                  <label for="Ausentes">Ausentes</label>
-                  <input type="checkbox" name="check" id="Diminuído">
-                  <label for="Diminuído">Diminuído</label>
-                  <input type="checkbox" name="check" id="Aumentado">
-                  <label for="Aumentado">Aumentado</label>
+                  <b>RHA:</b> {{paciente.RHA}}
                   <hr>
                   <br>
-                  Ostomia:
-                  <input type="checkbox" name="check" id="OstomiaNão">
-                  <label for="OstomiaNão">Não</label>
-                  <input type="checkbox" name="check" id="OstomiaSim">
-                  <label for="OstomiaSim">Sim</label>
+                  <b>Ostomia:</b>
+                  <p>Local: {{paciente.ostomiaLocal}}</p>
+                  <p>Característica: {{paciente.ostomiaCaracteristica}}</p>
                   <hr>
                   <br>
-                  Eliminação intestinal:
+                  <b>Eliminação intestinal:</b>
                   <br>
-                  <br>
-                  Frequencia:
-                  <br>
-                  <br>
-                  Característica:
-                  <input type="checkbox" name="check" id="Normal">
-                  <label for="Normal">Normal</label>
-                  <input type="checkbox" name="check" id="Constipação">
-                  <label for="Constipação">Constipação</label>
-                  <input type="checkbox" name="check" id="Diarréia">
-                  <label for="Diarréia">Diarréia</label>
-                  <input type="checkbox" name="check" id="Incontinência">
-                  <label for="Incontinência">Incontinência</label>
-                  , Outros:
-
+                  <p>Frequencia: {{paciente.eliminacaoIntestinal_frequencia}}</p>
+                  <p>Característica: {{paciente.eliminacaoIntestinal}}</p>
                 </td>
               </tr>
               <tr>
@@ -467,34 +267,34 @@
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                  Lesões:
+                  <b>Lesões:</b> {{paciente.genitalia_lesoes}}
+                  <br>
                   <hr>
                   <br>
-                  Pele:
-                  <input type="checkbox" name="check" id="Cianose">
-                  <label for="Cianose">Cianose</label>
-                  <input type="checkbox" name="check" id="Icterícia">
-                  <label for="Icterícia">Icterícia</label>
-                  <input type="checkbox" name="check" id="Palidez">
-                  <label for="Palidez">Palidez</label>
-                  <input type="checkbox" name="check" id="Prurido">
-                  <label for="Prurido">Prurido</label>
-                  <input type="checkbox" name="check" id="Petéquias">
-                  <label for="Petéquias">Petéquias</label>
-                  <input type="checkbox" name="check" id="Corado">
-                  <label for="Corado">Corado</label>
-                  <input type="checkbox" name="check" id="Hipocorado">
-                  <label for="Hipocorado">Hipocorado</label>
-                  <input type="checkbox" name="check" id="Hipercorado">
-                  <label for="Hipercorado">Hipercorado</label>
-                  <input type="checkbox" name="check" id="Equimoses">
-                  <label for="Equimoses">Equimoses</label>
+                  <b>Pele:</b> {{paciente.pele}}
                   <br>
-                  <input type="checkbox" name="check" id="Hematomas">
-                  <label for="Hematomas">Hematomas</label>
-                  <input type="checkbox" name="check" id="Escoriações">
-                  <label for="Escoriações">Escoriações</label>
-                  , Outros:
+                  <hr>
+                  <br>
+                  <b>Temperatura (ºC):</b> {{paciente.pele_temperatura}}
+                  <br>
+                  <hr>
+                  <br>
+                  <b>Olhos: </b> {{paciente.olhos}}
+                  <br>
+                  <hr>
+                  <br>
+                  <b>AVP:</b>
+                      <p>Local: {{paciente.AVP_local}}</p>
+                      <p>Tempo de permanência: {{paciente.AVP_tempo}}</p>
+                  <b>CVC:</b>
+                      <p>Local: {{paciente.CVC_local}}</p>
+                      <p>Tempo de permanência: {{paciente.CVC_local}}</p>
+                  <b>Dreno: </b>
+                      <p>Local: {{paciente.dreno_local}}</p>
+                      <p>Tipo de dreno: {{paciente.dreno_tipo}}</p>
+                  <hr>
+                  <br>
+                  <b>Genitália:</b> {{paciente.genitalia}}
                 </td>
               </tr>
               <tr>
@@ -502,29 +302,18 @@
               </tr>
               <tr>
                 <td class="tg-yw4l">
-                  Necessidade de contenção no leito:
-                  <input type="checkbox" name="check" id="contencaoNao">
-                  <label for="contencaoNao">Não</label>
-                  <input type="checkbox" name="check" id="contencaoSim">
-                  <label for="contencaoSim">Sim</label>
+                  <b>Necessidade de contenção no leito:</b> {{paciente.necessidadeDeContencao}}
                   <hr>
                   <br>
-                  Risco para queda:
-                  <input type="checkbox" name="check" id="quedaNao">
-                  <label for="quedaNao">Não</label>
-                  <input type="checkbox" name="check" id="quedaSim">
-                  <label for="quedaSim">Sim</label>
+                  <b>Risco para queda:</b> {{paciente.riscoParaQueda}}
                   <hr>
                   <br>
-                  Escala de Braden:
+                  <b>Escala de Braden:</b> {{paciente.escore}}
                   <hr>
                   <br>
-                  Observações:
-                  <br>
-                  <br>
+                  <b>Observações:</b> {{paciente.observacoes}}
                 </td>
               </tr>
-
             </tbody>
           </table>
 
@@ -558,15 +347,27 @@
 <script>
 import NavBar from '@/components/NavBar'
 
-// var $ = require('jquery')
+var $ = require('jquery')
 
 export default {
   data () {
     return {
+      paciente: {}
     }
   },
   methods: {
+    getHistorico () {
+      let id = this.$route.params.idpaciente
 
+      $.get('http://localhost/sae/getHistoricoPaciente.php?id=' + id)
+        .then(res => {
+          this.paciente = res
+          console.log(this.paciente)
+        })
+    }
+  },
+  created: function () {
+    this.getHistorico()
   },
   components: {
     NavBar: NavBar
@@ -650,5 +451,13 @@ p {
   font-size: 16px;
   background-color: #c0c0c0;
   vertical-align: top
+}
+
+p{
+  margin-bottom: 0px;
+}
+.tdata{
+  padding-left: 0px !important;
+  border-style: none !important;
 }
 </style>
