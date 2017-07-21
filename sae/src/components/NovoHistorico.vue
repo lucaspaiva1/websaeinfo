@@ -209,7 +209,7 @@
                   <label for="aspiracaoCaracteristica">Quantidade:</label>
                   <input name="aspiracaoCaracteristica" type="Text" id="aspiracaoCaracteristica" v-model="historico.aspiracaoCaracteristica">
                   <label for="aspiracaoQuantidade">Característica:</label>
-                  <input name="aspiracaoQuantidade" type="Text" id="aspiracaoQuantidade" v-model="historico.aspiracaoQuantidade">
+                  <input name="aspiracaoQuantidade" type="number" id="aspiracaoQuantidade" v-model="historico.aspiracaoQuantidade">
 
                   <br>
 
@@ -217,7 +217,7 @@
                   <label for="drenagemCaracteristica">Quantidade:</label>
                   <input name="drenagemCaracteristica" type="Text" id="drenagemCaracteristica" v-model="historico.drenagemCaracteristica">
                   <label for="drenagemQuantidade">Característica:</label>
-                  <input name="drenagemQuantidade" type="Text" id="drenagemQuantidade" v-model="historico.drenagemQuantidade">
+                  <input name="drenagemQuantidade" type="number" id="drenagemQuantidade" v-model="historico.drenagemQuantidade">
 
                   <input type="checkbox" name="drenagemToracicaDTE" id="DTE" value="DTE" v-model="historico.drenagemToracicaDTE">
                   <label for="DTE">DTE</label>
@@ -527,9 +527,9 @@ export default {
         prevencaoDeTosse: '',
         presencaoDeTosse_xpectoracao: '',
         aspiracaoCaracteristica: '',
-        aspiracaoQuantidade: '',
+        aspiracaoQuantidade: 0,
         drenagemCaracteristica: '',
-        drenagemQuantidade: '',
+        drenagemQuantidade: 0,
         drenagemToracicaDTD: false,
         drenagemToracicaDTE: false,
         drenagemToracica: '',

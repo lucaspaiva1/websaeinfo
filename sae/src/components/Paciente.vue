@@ -10,7 +10,7 @@
           <div id="contenta">
 
               <div class="breadcrumbs">
-                  <a href="/saeinfo">Início</a> › <a href="#/saeinfo/pacientes">Pacientes</a> › {{paciente.Nome}}
+                  <a href="/#/saeinfo">Início</a> › <a href="/#/saeinfo/pacientes">Pacientes</a> › {{paciente.Nome}}
               </div>
               <!-- Content -->
               <div id="content" class="colM">

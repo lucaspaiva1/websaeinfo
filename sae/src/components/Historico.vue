@@ -9,10 +9,10 @@
 
           <!-- END Header -->
           <div class="breadcrumbs">
-              <a href="#/saeinfo">Início</a>
+              <a href="/#/saeinfo">Início</a> › <a href="/#/saeinfo/pacientes">Pacientes</a>
           </div>
           <div class="print">
-            <a :href="'/#/saeinfo/paciente/'+$route.params.idpaciente+'/HistoricoEnfermagem'" type="button" name="button">Tela de Impressão</a>
+            <a :href="'/#/saeinfo/paciente/'+$route.params.idpaciente+'/HistoricoEnfermagem'" target="_blank" type="button" name="button">Tela de Impressão</a>
           </div>
           <div id="main-content" action="" style="line-height: 25px;" method="POST">
               <fieldset class="module aligned ">
@@ -208,17 +208,17 @@
 
                   <label><b>Aspiração:</b></label>
                   <label for="aspiracaoCaracteristica">Quantidade:</label>
-                  <input name="aspiracaoCaracteristica" type="Text" id="aspiracaoCaracteristica" v-model="historico.aspiracaoCaracteristica">
+                  <input name="aspiracaoQuantidade" type="number" id="aspiracaoQuantidade" v-model="historico.aspiracaoQuantidade">
                   <label for="aspiracaoQuantidade">Característica:</label>
-                  <input name="aspiracaoQuantidade" type="Text" id="aspiracaoQuantidade" v-model="historico.aspiracaoQuantidade">
+                  <input name="aspiracaoCaracteristica" type="Text" id="aspiracaoCaracteristica" v-model="historico.aspiracaoCaracteristica">
 
                   <br>
 
                   <label><b>Drenagem Torácica:</b></label>
                   <label for="drenagemCaracteristica">Quantidade:</label>
-                  <input name="drenagemCaracteristica" type="Text" id="drenagemCaracteristica" v-model="historico.drenagemCaracteristica">
+                  <input name="drenagemQuantidade" type="number" id="drenagemQuantidade" v-model="historico.drenagemQuantidade">
                   <label for="drenagemQuantidade">Característica:</label>
-                  <input name="drenagemQuantidade" type="Text" id="drenagemQuantidade" v-model="historico.drenagemQuantidade">
+                  <input name="drenagemCaracteristica" type="Text" id="drenagemCaracteristica" v-model="historico.drenagemCaracteristica">
 
                   <input type="checkbox" name="drenagemToracicaDTE" id="DTE" value="DTE" v-model="historico.drenagemToracicaDTE">
                   <label for="DTE">DTE</label>
@@ -534,9 +534,9 @@ export default {
         prevencaoDeTosse: '',
         presencaoDeTosse_xpectoracao: '',
         aspiracaoCaracteristica: '',
-        aspiracaoQuantidade: '',
+        aspiracaoQuantidade: 0,
         drenagemCaracteristica: '',
-        drenagemQuantidade: '',
+        drenagemQuantidade: 0,
         drenagemToracicaDTD: false,
         drenagemToracicaDTE: false,
         drenagemToracica: '',
@@ -611,6 +611,10 @@ export default {
       $.get('http://localhost/sae/getHistorico.php?id=' + id)
       .then(resposta => {
         this.historico = resposta
+        if (resposta === false) {
+          window.history.back()
+          alert('Paciente ainda possui historico!')
+        }
 
         // atribuindo antecedentes
         this.historico.antecedentesOpcoes = []

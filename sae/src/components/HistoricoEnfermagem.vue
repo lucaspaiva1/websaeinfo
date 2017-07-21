@@ -4,14 +4,9 @@
   <!-- Container -->
   <div id="container">
 
-    <!-- Header -->
+    <!-- Header
     <NavBar></NavBar>
-    <!-- END Header -->
-
-    <div class="breadcrumbs">
-      <a href="/">Início</a>
-
-    </div>
+     END Header -->
 
     <!-- Content -->
     <div id="content" class="colM">

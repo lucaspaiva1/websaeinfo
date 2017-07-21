@@ -18,8 +18,8 @@
                     <tbody>
                       <tr class="model-user">
                         <th scope="row"><a href="#/saeinfo/usuarios">Usuários</a></th>
-                          <td><a class="addlink">Adicionar</a></td>
-                          <td><a class="changelink">Listar</a></td>
+                          <td><a href="#/saeinfo/paciente/novo" class="addlink">Adicionar</a></td>
+                          <td><a href="#/saeinfo/usuarios" class="changelink">Listar</a></td>
                       </tr>
                     </tbody>
                   </table>
