@@ -10,6 +10,7 @@ import Historico from '@/components/Historico'
 import HistoricoEnfermagem from '@/components/HistoricoEnfermagem'
 import Usuarios from '@/components/Usuarios'
 import NovoUsuario from '@/components/NovoUsuario'
+import Caracteristicas from '@/components/Caracteristicas'
 
 Vue.use(Router)
 
@@ -64,7 +65,11 @@ export default new Router({
       path: '/saeinfo/usuario/novo',
       name: 'NovoUsuario',
       component: NovoUsuario
+    },
+    {
+      path: '/saeinfo/caracteristicas',
+      name: 'Caracteristicas',
+      component: Caracteristicas
     }
-
   ]
 })
