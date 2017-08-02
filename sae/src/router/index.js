@@ -11,6 +11,7 @@ import HistoricoEnfermagem from '@/components/HistoricoEnfermagem'
 import Usuarios from '@/components/Usuarios'
 import NovoUsuario from '@/components/NovoUsuario'
 import Caracteristicas from '@/components/Caracteristicas'
+import NovaCaracteristica from '@/components/NovaCaracteristica'
 
 Vue.use(Router)
 
@@ -70,6 +71,11 @@ export default new Router({
       path: '/saeinfo/caracteristicas',
       name: 'Caracteristicas',
       component: Caracteristicas
+    },
+    {
+      path: '/saeinfo/caracteristica/nova',
+      name: 'NovaCaracteristica',
+      component: NovaCaracteristica
     }
   ]
 })
