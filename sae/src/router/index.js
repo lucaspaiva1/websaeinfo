@@ -16,6 +16,7 @@ import NovaCaracteristica from '@/components/NovaCaracteristica'
 import Intervencoes from '@/components/Intervencoes'
 import NovaIntervencao from '@/components/NovaIntervencao'
 import Intervencao from '@/components/Intervencao'
+import Diagnosticos from '@/components/Diagnosticos'
 
 Vue.use(Router)
 
@@ -100,6 +101,11 @@ export default new Router({
       path: '/saeinfo/intervencao/:idIntervencao',
       name: 'Intervencao',
       component: Intervencao
+    },
+    {
+      path: '/saeinfo/diagnosticos',
+      name: 'Diagnosticos',
+      component: Diagnosticos
     }
   ]
 })

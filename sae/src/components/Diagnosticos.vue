@@ -1,5 +1,5 @@
 <template>
-<body class=" app-SaeApp model-intervencao change-list">
+<body class=" app-SaeApp model-diagnostico change-list">
   <!-- Container -->
   <div id="container">
 
@@ -8,79 +8,81 @@
     <!-- END Header -->
 
     <div class="breadcrumbs">
-      <a href="/#/saeinfo/">Início</a>
+      <a href="/#/saeinfo">Início</a>
       ›
-      <a href="/#/saeinfo/intervencoes">Intervenções</a>
+      <a href="/#/saeinfo/diagnosticos">Diagnósticos</a>
     </div>
 
     <!-- Content -->
     <div id="content" class="flex">
-      <h1>Selecione intervencao para modificar</h1>
+      <h1>Selecione diagnóstico para modificar</h1>
       <div id="content-main">
         <ul class="object-tools">
           <li>
-            <a href="/#/saeinfo/intervencao/nova" class="addlink">
-              Adicionar intervencao
+            <a href="/#/saeinfo/diagnostico/novo" class="addlink">
+              Adicionar diagnóstico
             </a>
           </li>
         </ul>
+
         <div class="module" id="changelist">
           <form id="changelist-form" action="" method="post" novalidate="">
             <div class="actions">
-              <label>Ação:
-                <select name="action">
-                  <option value="" selected="selected">---------</option>
-                  <option value="delete_selected">Remover intervencaos selecionados</option>
-                </select>
-              </label>
-              <input class="select-across" name="select_across" type="hidden" value="0">
-                <button type="submit" class="button" title="Executar ação selecionada" name="index" value="0">Fazer</button>
-                <span class="action-counter" style="display: inline;">0 de 18 selecionados</span>
-              </div>
-              <div class="results">
-                <table id="result_list">
-                  <thead>
-                    <tr>
-                      <th scope="col" class="action-checkbox-column">
-                        <div class="text">
-                          <span>
-                            <input type="checkbox" id="action-toggle" style="display: inline-block;">
-                          </span>
-                        </div>
-                        <div class="clear"></div>
+              <label>Ação: <select name="action">
+                <option value="" selected="selected">---------</option>
+                <option value="delete_selected">Remover diagnósticos selecionados</option>
+              </select></label><input class="select-across" name="select_across" type="hidden" value="0">
+              <button type="submit" class="button" title="Executar ação selecionada" name="index" value="0">Fazer</button>
+              <span class="action-counter" style="display: inline;">0 de 2 selecionados</span>
+            </div>
+            <div class="results">
+              <table id="result_list">
+                <thead>
+                  <tr>
+                    <th scope="col" class="action-checkbox-column">
+                      <div class="text">
+                        <span>
+                          <input type="checkbox" id="action-toggle" style="display: inline-block;">
+                        </span>
+                      </div>
+                      <div class="clear"></div>
+                    </th>
+                    <th scope="col" class="column-__str__">
+                      <div class="text">
+                        <span>Diagnóstico</span>
+                      </div>
+                      <div class="clear"></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(diagnostico, index) in diagnosticos" :class="index % 2 == 0 ? 'row1' : 'row2'">
+                      <td class="action-checkbox">
+                        <input class="action-select" name="_selected_action" type="checkbox" value="70">
+                      </td>
+                      <th class="field-Nome">
+                        <a :href="'#/saeinfo/diagnostico/'+diagnostico.id">{{diagnostico.titulo}}</a>
                       </th>
-                      <th scope="col" class="column-__str__">
-                        <div class="text">
-                          <span>Intervencao</span>
-                        </div>
-                        <div class="clear"></div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(intervencao, index) in intervencoes" :class="index % 2 == 0 ? 'row1' : 'row2'">
-                        <td class="action-checkbox">
-                          <input class="action-select" name="_selected_action" type="checkbox" value="70">
-                        </td>
-                        <th class="field-Nome">
-                          <a :href="'#/saeinfo/intervencao/'+intervencao.id">{{intervencao.titulo}}</a>
-                        </th>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p v-if='intervencoes' class="paginator">
-                  {{intervencoes.length}} intervenções
-              </p>
-            </form>
-          </div>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p v-if='diagnosticos' class="paginator">
+                {{diagnosticos.length}} diagnósticos
+            </p>
+
+          </form>
         </div>
-        <br class="clear">
       </div>
-      <!-- END Content -->
-      <div id="footer"></div>
+
+      <br class="clear">
     </div>
-    <!-- END Container -->
+    <!-- END Content -->
+
+    <div id="footer"></div>
+  </div>
+  <!-- END Container -->
 </body>
 </template>
 
@@ -90,18 +92,18 @@ import NavBar from '@/components/NavBar'
 var $ = require('jquery')
 
 export default {
-  name: 'Intervencoes',
+  name: 'Diagnosticos',
   data () {
     return {
-      intervencoes: this.intervencoes
+      diagnosticos: this.diagnosticos
     }
   },
   methods: {
-    getIntervencoes () {
-      $.get('http://localhost/sae/listaIntervencoes.php')
+    getDiagnosticos () {
+      $.get('http://localhost/sae/listaDiagnosticos.php')
       .then(resposta => {
         console.log(resposta)
-        this.intervencoes = resposta
+        this.diagnosticos = resposta
       },
       function () {
         console.log('deu error')
@@ -112,7 +114,7 @@ export default {
     NavBar: NavBar
   },
   created: function () {
-    this.getIntervencoes()
+    this.getDiagnosticos()
   }
 }
 </script>
