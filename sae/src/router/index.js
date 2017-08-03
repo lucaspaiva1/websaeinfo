@@ -14,6 +14,7 @@ import Caracteristicas from '@/components/Caracteristicas'
 import Caracteristica from '@/components/Caracteristica'
 import NovaCaracteristica from '@/components/NovaCaracteristica'
 import Intervencoes from '@/components/Intervencoes'
+import NovaIntervencao from '@/components/NovaIntervencao'
 
 Vue.use(Router)
 
@@ -85,9 +86,14 @@ export default new Router({
       component: Caracteristica
     },
     {
-      path: '/saeinfo/Intervencoes',
+      path: '/saeinfo/intervencoes',
       name: 'Intervencoes',
       component: Intervencoes
+    },
+    {
+      path: '/saeinfo/intervencao/nova',
+      name: 'NovaIntervencao',
+      component: NovaIntervencao
     }
   ]
 })
