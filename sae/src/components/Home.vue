@@ -52,6 +52,16 @@
 
                               </tr>
 
+                              <tr class="model-caracteristicasdefinidora">
+
+                                  <th scope="row"><a href="#/saeinfo/diagnosticos">Diagnósticos</a></th>
+
+                                  <td><a href="#/saeinfo/diagnostico/novo/" class="addlink">Adicionar</a></td>
+
+                                  <td><a href="#/saeinfo/diagnosticos" class="changelink">Listar</a></td>
+
+                              </tr>
+
                               <tr class="model-intervencao">
 
                                   <th scope="row"><a href="#/saeinfo/intervencoes/">Intervenções</a></th>
