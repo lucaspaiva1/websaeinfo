@@ -23,7 +23,7 @@
             <a href="/SaeApp/caracteristica/26/history/" class="historylink">Histórico</a>
           </li>
         </ul>
-        <form  method="post" @submit.prevent v-on:submit="salvar" id="caracteristica_form">
+        <form @submit.prevent v-on:submit="salvar" id="caracteristica_form">
 
           <p v-if="erro!== ''" class="errornote">
             {{erro}}
@@ -104,9 +104,9 @@ export default {
         if (res === true) {
           window.location.replace('/#/saeinfo/caracteristicas')
         } else if (res === 'existe') {
-
+          this.erro = 'caracteristica já existe no sistema'
         } else {
-
+          this.erro = 'erro ao cadastrar'
         }
       })
     }
