@@ -13,6 +13,7 @@ import NovoUsuario from '@/components/NovoUsuario'
 import Caracteristicas from '@/components/Caracteristicas'
 import Caracteristica from '@/components/Caracteristica'
 import NovaCaracteristica from '@/components/NovaCaracteristica'
+import Intervencoes from '@/components/Intervencoes'
 
 Vue.use(Router)
 
@@ -82,6 +83,11 @@ export default new Router({
       path: '/saeinfo/caracteristica/:idCaracteristica',
       name: 'Caracteristica',
       component: Caracteristica
+    },
+    {
+      path: '/saeinfo/Intervencoes',
+      name: 'Intervencoes',
+      component: Intervencoes
     }
   ]
 })
