@@ -645,7 +645,7 @@ export default {
       $.post('http://localhost/sae/addHistorico.php', JSON.stringify(this.historico))
         .then(res => {
           console.log(res)
-          window.location.replace('#/saeinfo/paciente/' + this.historico.idPaciente)
+          // window.location.replace('#/saeinfo/paciente/' + this.historico.idPaciente)
         })
     }
   },
